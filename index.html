@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+<style>
+  .menu-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1000000;
+    
+  }
+ 
+.menu-button div {
+    width: 100%;
+    height: 5px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+       z-index: 10000;
+  }
+
+  .nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav.show {
+    display: flex;
+  }
+</style>
+
+	
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>avemariaschool</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('/storage/A1A0-1302/Podcasts/photos/Vibrant School Courtyard with Tree.png'); 
+      background-size:cover ;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      height: 100vh;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+    }
+    
+  
+    
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      text-align: center;
+    }
+    
+    
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    } 
+
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    section {
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: 30px auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 800px;
+      border-radius: 12px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #ffd700;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #ffcc00;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      height: 500px;
+      overflow: hidden;
+         z-index: 1;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      animation: fade 1s ease-in-out;
+    }
+
+    @keyframes fade {
+      from { opacity: 0.4; }
+      to { opacity: 1; }
+    }
+
+    /* Buttons */
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      font-size: 24px;
+      padding: 10px;
+      cursor: pointer;
+      border: none;
+      
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    /* Responsive */
+    @media screen and (max-width: 600px) {
+      .slideshow-container {
+        height: 250px;
+      }
+
+      .slide {
+        height: 250px;
+      }
+
+      .prev, .next {
+        font-size: 18px;
+        padding: 8px;
+      }
+       
+  </style>
+  
+  
+<header>
+  <nav>
+    <div style="margin-center: auto;">
+      <img src="/storage/emulated/0/Podcasts/photo/IMG_202507199_130642352.jpg" alt="Ave Maria Catholic Schools Logo" width="50" height="50">
+    </div>
+    <!-- existing navigation links -->
+  </nav>
+</header>
+
+
+<body>
+	
+	<!-- Menu Button -->
+<div class="menu-button" onclick="toggleMenu()">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<!-- Navigation Links -->
+<div class="nav" id="navMenu">
+  <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="#admission">Admission</a>
+      <a href="gallery.html">Gallery</a>
+        <a href="news.html">News</a> 
+   <a href="event.html">Event</a> 
+     <a href="contact.html">Contact-Us</a>
+     <a href="Admin(1).html">Admin</a>  
+  <a href="staff.html">Staffs</a>      
+    <button><a href="quiz.html">TEST/QUIZ</a> </button>
+  
+</div>
+
+<header>
+    <h1 id="welcome-text">Welcome to Ave maria Catholic Schools</h1>
+    <div class="overlay">
+    
+  </header>	
+  
+  <div class="slideshow-container">
+  <img class="slide" src="/storage/emulated/0/Podcasts/photo/FB_IMG_1723096545496.jpg" alt="Rev.Father Joseph">
+  <img class="slide" src="/storage/emulated/0/Podcasts/photo/Screenshot_20250708-090818_1.png" alt="Rev.Fathe Olamaria">
+  <img class="slide" src="/storage/emulated/0/Podcasts/photo/Vibrant School with Arched Walkways.jpg" alt="walkways">
+    <img class="slide" src="/storage/emulated/0/Podcasts/photo/IMG-20250715-WA0013_1.jpg" alt="walkways">
+
+  <button class="prev" onclick="changeSlide(-1)">❮</button>
+  <button class="next" onclick="changeSlide(1)">❯</button>
+</div>	
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Ave Maria School is committed to excellence in education, nurturing students to become global leaders with strong values and academic strength.</p>
+  </section>
+  <section id="admission">
+    <h2>Admission</h2>
+    <p>Enroll your child today! We offer a wide range of programs from nursery to secondary levels, with top-notch facilities and experienced teachers.</p>
+    <button><a href="sform.html">Apply Now</a> </button> </section>
+    
+    <section>
+    	
+      <head
+    
+
+  <section>
+    <h2>Academic Structure</h2>
+    <p>
+      At Ave Maria Schools, we provide a solid academic foundation that prepares students for success in life and further education.
+    </p>
+    <ul>
+      <li>Creche, Nursery & Kindergarten</li>
+      <li>Basic Primary Education</li>
+      <li>School for the Deaf & Dumb
+      <li>Junior & Senior Secondary (JSS1 – SSS3)</li>
+      
+    </ul>
+
+    <h2>Curriculum</h2>
+    <p>
+      We follow the Nigerian National Curriculum blended with international best practices. Our subjects include:
+    </p>
+    <ul>
+      <li>Mathematics</li>
+      <li>English Language</li>
+      <li>French
+      <li>Basic Science & Technology</li>
+      <li>Social Studies, Civic Education, Religious Studies</li>
+      <li>ICT, Agriculture, Creative Arts, and more</li>
+      
+    </ul>
+
+    <h2>Admission Process</h2>
+    <p>
+      Admission is open to qualified pupils and students into all levels depending on availability. Entry assessments may be conducted where necessary. Visit the School website and Click on the Apply button. Or you can call the number below for more enquiries
+    </p>
+
+  
+    </section>
+    
+    
+    
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email:info@avemariaschool.edu<br>Phone: +234-909-453-1393<br>Address: Opp. Aisha Street Taiwo Road Lafiagi, kwara, Nigeria</p>
+  
+</section>
+
+<section>
+  <h3>Find Us on Map</h3>
+  <div class="mapouter" style="position:relative; text-align:right; width:300px; height:300px;">
+  <div class="gmap_canvas" style="overflow:hidden; background:none!important; width:300px; height:300px;">
+    <iframe width="300px" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/search?q=Ave%20Maria%20School%20Lafiagi%20Kwara%20State&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+  </div>
+</div>
+</section>
+
+
+<header>
+  <nav>
+    <div style="margin-left: auto;">
+<div id="timer"></div> </div>
+</vav>
+</header>
+
+
+  <footer>
+  	<hr>
+  &copy; 2025 Ave maria school Lafiagi. All rights reserved.
+  </footer>
+  <script>
+    // Animated welcome text
+    const text ="Welcome to Ave Maria Catholic Schools";
+    let i = 0;
+    function typeEffect() {
+      if (i < text.length) {
+        document.getElementById("welcome-text").textContent += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 100);
+      }
+    }
+
+    // Clear and start typing
+    document.getElementById("welcome-text").textContent = " ";
+    typeEffect();
+  </script>
+  
+</body>
+
+
+<script>
+const timerElement = document.getElementById('timer');
+
+function updateTimer() {
+  const now = new Date();
+  const hours = now.getHours().toString().padStart(2, '0');
+  const minutes = now.getMinutes().toString().padStart(2, '0');
+  const seconds = now.getSeconds().toString().padStart(2, '0');
+  timerElement.textContent = `${hours}:${minutes}:${seconds}`;
+}
+
+setInterval(updateTimer, 1000);
+updateTimer(); // initial update
+
+</script>
+
+
+
+
+
+
+<script>
+	
+$(document).ready(function() {
+  $('#layerslider').layerSlider({
+    responsive: true,
+    skin: 'defaultskin',
+    thumbnailNavigation: 'disabled',
+    hoverPrevNext: false,
+    keyboardNavigation: true,
+    pauseOnHover: false,
+    autoStart: true,
+    loops: -1 // Loop infinitely
+  });
+});
+</script>	
+	
+	
+<script>
+    let slideIndex = 0;
+    let slides = document.getElementsByClassName("slide");
+    let timer;
+    function showSlide(n) {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex = (n + slides.length) % slides.length;
+      slides[slideIndex].style.display = "block";
+    }
+
+    function changeSlide(n) {
+      clearTimeout(timer);
+      showSlide(slideIndex + n);
+      autoSlide();
+    }
+
+    function autoSlide() {
+      timer = setTimeout(() => {
+        showSlide(slideIndex + 1);
+        autoSlide();
+      }, 3000);
+    }
+
+    // Initialize slideshow
+    showSlide(slideIndex);
+    autoSlide();
+  </script>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('navMenu');
+    menu.classList.toggle('show');
+  }
+</script>
+</html>

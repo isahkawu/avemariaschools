@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<style>
+  .menu-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1000000;
+    
+  }
+ 
+
+  .menu-button div {
+    width: 100%;
+    height: 5px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+       z-index: 10000;
+  }
+
+  .nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+
+  .nav.show {
+    display: flex;
+  }
+</style>
+
+	
+	
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Gallery </title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+      padding: 20px;
+      background-color: #0047AB;
+      color: white;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+	
+	
+	<!-- Menu Button -->
+<div class="menu-button" onclick="toggleMenu()">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<!-- Navigation Links -->
+<div class="nav" id="navMenu">
+  <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="#admission">Admission</a>
+      <a href="gallery.html">Gallery</a>
+        <a href="news.html">News</a> 
+   <a href="event.html">Event</a> 
+     <a href="contact.html">Contact-Us</a>
+     <a href="admin(1).html">Admin</a>      
+  <a href="staff.html">Staffs</a>      
+  
+</div>
+
+	
+	
+
+  <h1>ADMINISTRATIVE BOARD</h1>
+  
+  <div class="gallery">
+  	<div class="container">
+  
+  </div>
+  
+  
+    <div style="margin-center: auto;">
+    <img src="/storage/emulated/0/Podcasts/photo/FB_IMG_1723096545496.jpg"  div class="text"> REV. FATHER JOSEPH AWOYALE <br>(College Administrator)
+    </div>
+
+    <div style="margin-center: auto;">
+    <img src="/storage/emulated/0/Podcasts/photo/Screenshot_20250708-090818_1.png" div class="text">REV. FATHER OLA MARIA OYEYIOLA</br> (College Principal)
+    </div>
+    
+    <div style="margin-center: auto;">
+    <img src="/storage/emulated/0/Podcasts/photo/ajax-loader.gif" div class="text">MR. SHABA N. IBRAHIM</br> (V.P Admin)
+    </div>
+    
+    <div class="container">
+  
+  </div>
+ <div style="margin-center: auto;"> 
+<img src="/storage/emulated/0/Podcasts/photo/_20250209_163002.JPG.jpg" div class="text">MR. ABDULRAHEEM KAWU</br> (V.P ACADEMICS)
+</div>
+    <img src="/storage/A1A0-1302/Podcasts/photos/IMG-20250722-WA0000_1.jpg" div class="text">MALL. SURAJUDEEN</br>(HEAD MASTER)
+    
+  </div>
+
+</body>
+
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('navMenu');
+    menu.classList.toggle('show');
+  }
+</script>
+
+
+
+</html>
